@@ -58,6 +58,12 @@ body {
   color: #fff;
 }
 
+.title-wrap {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
 section h1 {
   font-weight: 500;
 }
@@ -73,6 +79,14 @@ a.socials {
 
 a.socials img {
   height: 120px;
+}
+
+footer {
+	background-color: #373d42;
+}
+
+.footer-container {
+	margin-top: 40px;
 }
 
 footer p.copyright {
