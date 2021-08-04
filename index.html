@@ -1,65 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bonjour et bienvenue, je suis développeur web"> 
-  <meta name="author" content="Pyrospower">
-  <meta property="og:image" content="https://pbs.twimg.com/profile_images/1199062019963535360/5ZT3FTPt_400x400.png">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bonjour et bienvenue, je suis développeur web"
+    />
+    <meta name="author" content="Pyrospower" />
+    <meta
+      property="og:image"
+      content="https://pbs.twimg.com/profile_images/1199062019963535360/5ZT3FTPt_400x400.png"
+    />
+    <meta name="theme-color" content="#1e90ff" />
+    <meta name="keywords" content="Pyrospower, socials" />
 
-  <link href="/css/style.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-  
-  <title>Pyrospower</title>
-</head>
-<body>
-  <div class="container">
-    <section>
-	<h1>Pyrospower</h1>
-      <h2>You can find me here</h2>
+    <!-- CSS -->
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/6dc73f4261.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Pyrospower</title>
+  </head>
+  <body>
+    <nav id="navigation" class="closeNav">
       <ul>
-        <li>
-		<a href="https://youtube.com/Pyrospower" class="socials">
-			<img src="/img/youtube_social_icon_red.png">
-			YouTube
-		</a>
-	</li>
-	<li>
-		<a href="https://twitter.com/Pyrospower" class="socials">
-			<img src="/img/Twitter_Logo_Blue.png">
-			Twitter
-		</a>
-	</li>
-	<li>
-		<a href="https://twitch.tv/pyrospower" class="socials">
-			<img src="/img/TwitchGlitchPurple.png">
-			Twitch
-		</a>
-	</li>
-	<li>
-		<a href="https://github.com/Pyrospower" class="socials">
-			<img src="/img/GitHub-Mark-Light-120px-plus.png">
-			Github
-		</a>
-	</li>
+        <h1>
+          <a href="javascript:void(0);" onclick="closeNav();"
+            ><i class="fas fa-times"></i
+          ></a>
+        </h1>
+        <li><a href="#">Home</a></li>
+        <li><a href="#content">Soon...</a></li>
+        <li><a href="#content2">Soon...</a></li>
       </ul>
-    </section>
-  </div>
-  
-  <footer>
-	<div class="footer-container">
-		<p class="copyright">© Pyrospower, 2020 - All rights reserved</p>
-	</div>
-  </footer>
-    
+    </nav>
+
+    <nav id="nav">
+      <div class="menu-burger">
+        <a href="javascript:void(0)" onclick="showNav();"
+          ><h3><i class="fas fa-bars"></i></h3
+        ></a>
+      </div>
+      <div class="website-title"><h3>Pyrospower</h3></div>
+    </nav>
+
+    <div id="hero">
+      <h1>Welcome to my GitHub page</h1>
+      <h2>Check out my social media down below!</h2>
+      <a href="#content"><button id="CTA">Go to Socials</button></a>
+    </div>
+
+    <div id="content">
+      <div class="sm-title-container">
+        <h3>Social Media</h3>
+        <span>Feel free to follow and subscribe!</span>
+      </div>
+      <div class="social-media isgone">
+        <ul>
+          <li id="youtube">
+            <!-- prettier-ignore -->
+            <a href="https://youtube.com/Pyrospower" target="_blank" class="socials"><i class="fab fa-youtube"></i></a>
+            <!-- prettier-ignore -->
+          </li>
+          <!-- prettier-ignore -->
+
+          <li id="twitter">
+			<!-- prettier-ignore -->
+			<a href="https://twitter.com/Pyrospower" target="_blank" class="socials"><i class="fab fa-twitter"></i></a>
+			<!-- prettier-ignore -->
+          </li>
+          <!-- prettier-ignore -->
+
+          <li id="twitch">
+			<!-- prettier-ignore -->
+			<a href="https://twitch.tv/pyrospower" target="_blank" class="socials"><i class="fab fa-twitch"></i></a>
+			<!-- prettier-ignore -->
+          </li>
+          <!-- prettier-ignore -->
+
+          <li id="github">
+            <!-- prettier-ignore -->
+            <a href="https://github.com/Pyrospower" target="_blank" class="socials"><i class="fab fa-github"></i></a>
+            <!-- prettier-ignore -->
+          </li>
+          <!-- prettier-ignore -->
+
+          <!-- Got a Discord server but it's dead Kappa
+          <li id="discord">
+            <a href="https://discord.io/Pyrospower" target="_blank" class="socials"><i class="fab fa-github"></i></a>
+          </li>
+		  -->
+        </ul>
+      </div>
+    </div>
+
+    <div id="content2">
+      <div class="soon isgone">
+        <h2>Another title</h2>
+        <!-- Projects maybe -->
+        <span id="change"></span>
+      </div>
+    </div>
+
+    <div class="go-up" id="scrollauto">
+      <a href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <p class="copyright">© Pyrospower, 2020 - All rights reserved</p>
+      </div>
+    </footer>
+
     <!-- Optional JavaScript -->
+    <script src="scripts/script.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

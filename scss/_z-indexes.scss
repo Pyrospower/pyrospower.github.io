@@ -1,0 +1,20 @@
+// z-indexes.scss
+
+@function z($name) {
+  @if index($z-indexes, $name) {
+    @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+  } @else {
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+    @return null;
+  }
+}
+$z-indexes: ("site-header", "go-up-arrow");
+
+/* 
+where ever you're wanting to use a z-index value, 
+name it the same as your class and add in it into your variables/setting file, like below.
+
+.site-header {
+    z-index: z('site-header');
+}
+*/
