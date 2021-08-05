@@ -114,3 +114,18 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+
+// Loader
+var btnanimation = document.getElementsByClassName("btnanimation");
+var rectangleanimation = document.getElementById("rectangleanimation");
+var blackshade = document.getElementById("blackshade");
+
+function closeanim() {
+  rectangleanimation.classList.remove("show2anim");
+  blackshade.classList.remove("show");
+}
+
+function openrectangleanim() {
+  rectangleanimation.classList.add("show2anim");
+  blackshade.classList.add("show");
+}

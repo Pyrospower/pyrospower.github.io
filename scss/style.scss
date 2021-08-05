@@ -1,5 +1,6 @@
-@use 'animations';
 @import "config";
+@import "z-indexes";
+@import "animations";
 @import "404";
 
 /*::selection {
@@ -59,7 +60,7 @@ h2 {
 #navigation {
   background-color: rgb(27, 27, 27);
   color: #fff;
-  z-index: 1;
+  z-index: z("site-header");
   height: 100vh;
   width: 30%;
   position: fixed;
@@ -168,7 +169,7 @@ footer {
   right: 24px;
   bottom: 24px;
   opacity: 0.8;
-  z-index: 3;
+  z-index: z("go-up-arrow");
   transition: 0.7s;
   &:hover {
     opacity: 1;

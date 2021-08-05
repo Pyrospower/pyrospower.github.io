@@ -25,9 +25,10 @@
     />
 
     <script
-      src="https://kit.fontawesome.com/6dc73f4261.js"
+      src="https://kit.fontawesome.com/019698acdf.js"
       crossorigin="anonymous"
     ></script>
+    <!-- https://kit.fontawesome.com/019698acdf.js à alexandre et https://kit.fontawesome.com/6dc73f4261.js à moi -->
 
     <title>Pyrospower</title>
   </head>
@@ -42,6 +43,14 @@
         <li><a href="#">Home</a></li>
         <li><a href="#content">Soon...</a></li>
         <li><a href="#content2">Soon...</a></li>
+        <li>
+          <a
+            href="javascript:void(0)"
+            onclick="openrectangleanim()"
+            class="btnanimation"
+            >Loader</a
+          >
+        </li>
       </ul>
     </nav>
 
@@ -53,6 +62,17 @@
       </div>
       <div class="website-title"><h3>Pyrospower</h3></div>
     </nav>
+
+    <!-- Fond noir transparent -->
+    <div onclick="closeanim()" class="blackshade" id="blackshade">
+      <div class="rectangleanimation" id="rectangleanimation">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
 
     <div id="hero">
       <h1>Welcome to my GitHub page</h1>
