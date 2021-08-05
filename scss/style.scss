@@ -1,7 +1,6 @@
 @use 'animations';
-$btncolor: rgb(0, 178, 118);
-$danger: rgb(255, 65, 65);
-$dark-bg: rgb(30, 30, 30);
+@import "config";
+@import "404";
 
 /*::selection {
   color: #fff;
@@ -21,6 +20,7 @@ body {
 body {
   font-family: "Montserrat", Helvetica, Arial, Verdana, sans-serif;
   color: #fff;
+  user-select: none;
 }
 
 /***************************/
