@@ -29,6 +29,7 @@ function makeNavBarFadeOut() {
 
 let words = [
   "Page under construction",
+  "Page en construction",
   "Seite im Aufbau",
   "Página en construcción",
   "Pagina in costruzione",
