@@ -379,16 +379,17 @@ header a:visited header a:hover {
 /***************************/
 #CTA {
   padding: 10px 15px;
-  border: rgb(0, 178, 118);
   border-radius: 10px;
   color: #fff;
   background-color: rgb(0, 178, 118);
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.4s ease;
   cursor: pointer;
 }
 #CTA:hover {
   background-color: rgb(0, 204, 153);
-  transition: background-color 0.5s ease-in;
 }
 
 /* gotta change window.scrollY to see if it works, if it does then change animations file & remove fadeInUp on socials */
@@ -434,6 +435,7 @@ header a:visited header a:hover {
 #hero .landing-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 1.5rem;
   max-width: 1080px;
   width: 100%;
