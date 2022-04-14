@@ -25,7 +25,7 @@ name it the same as your class and add in it into your variables/setting file, l
   font-size: 30px;
 }
 .rectangleanimation div {
-  background-color: #00b276;
+  background-color: rgb(0, 178, 118);
   height: 100%;
   width: 6px;
   display: inline-block;
@@ -202,7 +202,7 @@ name it the same as your class and add in it into your variables/setting file, l
 .error-container {
   height: 100vh;
   width: 100%;
-  background-color: #1e1e1e;
+  background-color: rgb(30, 30, 30);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,14 +241,16 @@ name it the same as your class and add in it into your variables/setting file, l
   color: #fff;
   background-color: #fff;
 }*/
-html {
-  scroll-behavior: smooth;
+* {
+  scrollbar-color: #454a4d #202324;
 }
 
+*,
 html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -259,7 +261,7 @@ body {
 
 /***************************/
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -267,7 +269,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #555555;
+  background: rgba(136, 146, 176, 0.5764705882);
   border-radius: 5px;
 }
 
@@ -280,7 +282,7 @@ h1 {
   font-size: 2rem;
   font-weight: 500;
   text-shadow: 1px 1px 4px #666666, 0 0 0.5em #000, 0 0 0.2em #666666;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -289,13 +291,19 @@ h2 {
   margin-bottom: 2rem;
 }
 
+/***************************/
 #navigation {
-  background-color: #1b1b1b;
-  color: #fff;
+  background-color: rgb(27, 27, 27);
   z-index: 4;
   height: 100vh;
   width: 30%;
   position: fixed;
+}
+#navigation ul div {
+  font-size: 2rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px #666666, 0 0 0.5em #000, 0 0 0.2em #666666;
+  margin-bottom: 1rem;
 }
 #navigation a {
   text-decoration: none;
@@ -309,13 +317,14 @@ h2 {
 #nav {
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 64px;
   padding-top: 1%;
   padding-bottom: 1%;
   color: #fff;
   background-color: #000;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   position: sticky;
 }
 #nav .menu-burger {
@@ -345,17 +354,18 @@ h2 {
   color: #fff;
 }
 
+/***************************/
 #CTA {
   padding: 10px 15px;
-  border: #00b276;
+  border: rgb(0, 178, 118);
   border-radius: 10px;
   color: #fff;
-  background-color: #00b276;
+  background-color: rgb(0, 178, 118);
   font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
 #CTA:hover {
-  background-color: #00cc99;
+  background-color: rgb(0, 204, 153);
   transition: background-color 0.5s ease-in;
 }
 
@@ -385,18 +395,27 @@ h2 {
   transition: 0.7s;
 }
 
+/***************************/
 footer {
   display: flex;
   width: 100%;
-  height: 20%;
   padding-top: 1%;
   padding-bottom: 1%;
-  color: #fff;
   background-color: #000;
   flex-direction: row;
   justify-content: space-around;
 }
+@media screen and (max-width: 768px) {
+  footer .footer-container {
+    padding: 0 1rem;
+  }
+  footer .footer-container .copyright {
+    font-size: 0.875rem;
+    margin: 1rem 0;
+  }
+}
 
+/***************************/
 .go-up {
   display: none;
   position: fixed;
@@ -443,7 +462,7 @@ footer {
   color: #fff;
   text-align: center;
   flex-direction: column;
-  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
 #hero a {
   text-decoration: none;
@@ -516,7 +535,7 @@ footer {
 }
 
 #twitter a.socials:hover {
-  color: #1d9bf0;
+  color: rgb(29, 155, 240);
 }
 
 #twitch a.socials:hover {
@@ -537,7 +556,7 @@ footer {
   }
 }*/
 #content2 {
-  background-color: #1e1e1e;
+  background-color: rgb(30, 30, 30);
   text-align: center;
   display: flex;
   flex-direction: column;
