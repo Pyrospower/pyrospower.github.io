@@ -403,20 +403,14 @@ h2 {
 footer {
   display: flex;
   width: 100%;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  height: 64px;
   background-color: #000;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
-@media screen and (max-width: 768px) {
-  footer .footer-container {
-    padding: 0 1rem;
-  }
-  footer .footer-container .copyright {
-    font-size: 0.875rem;
-    margin: 1rem 0;
-  }
+footer .copyright {
+  font-size: 0.875rem;
 }
 
 /***************************/
@@ -495,6 +489,7 @@ footer {
 }
 #content .sm-title-container h3 {
   font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 #content .sm-title-container span {
   font-size: 1.125rem;
