@@ -1,4 +1,4 @@
-@import "config";
+@import "variables";
 @import "z-indexes";
 @import "animations";
 @import "404";
@@ -55,31 +55,47 @@ h1 {
   font-size: 2rem;
   font-weight: 500;
   text-shadow: 1px 1px 4px #666666, 0 0 0.5em #000, 0 0 0.2em #666666;
-  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-size: 1rem;
   text-shadow: 1px 1px 4px #666666, 0 0 0.5em #000, 0 0 0.2em #666666;
-  margin-bottom: 2rem;
 }
 
 /***************************/
 
-#navigation {
+#menu {
   background-color: rgb(27, 27, 27);
   z-index: z("site-header");
   height: 100vh;
   width: 30%;
   position: fixed;
+
   ul {
-    div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    .cross-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $h-height-init;
+      transition: height 0.4s ease;
       font-size: 2rem;
-      font-weight: 500;
+    }
+
+    .menu__items-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.25rem;
       text-shadow: 1px 1px 4px #666666, 0 0 0.5em #000, 0 0 0.2em #666666;
-      margin-bottom: 1rem;
+      font-weight: 500;
+      font-size: 1rem;
+      padding-left: 25%;
     }
   }
+
   a {
     text-decoration: none;
     color: #fff;
@@ -90,19 +106,18 @@ h2 {
   }
 }
 
-#nav {
+header {
   display: flex;
-  width: 100%;
-  height: 64px;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  color: #fff;
-  background-color: #000;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  position: sticky;
-  .menu-burger {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $h-height-init;
+  background-color: #000;
+  transition: height 0.4s ease;
+
+  .burger {
     display: none;
     @media screen and (max-width: 768px) {
       display: flex;
@@ -110,14 +125,17 @@ h2 {
       width: 20%;
     }
   }
+
   .website-title {
     @media screen and (max-width: 768px) {
       width: 80%;
+
       h3 {
-        padding-left: 3.5rem;
+        padding-left: 18.5vw;
       }
     }
   }
+
   a {
     text-decoration: none;
     color: #fff;
@@ -172,78 +190,34 @@ h2 {
 
 /***************************/
 
-footer {
-  display: flex;
-  width: 100%;
-  height: 64px;
-  background-color: #000;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  .copyright {
-    font-size: 0.875rem;
-  }
-}
-
-/***************************/
-
-.go-up {
-  display: none;
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  opacity: 0.8;
-  z-index: z("go-up-arrow");
-  transition: 0.7s;
-  &:hover {
-    opacity: 1;
-  }
-  @media screen and (max-width: 768px) {
-    bottom: 32px;
-    height: auto;
-  }
-}
-
-#scrollauto {
-  &.go-up {
-    a {
-      //display: inline-block;
-      font-size: 42px;
-      color: #fff;
-      @media screen and (max-width: 768px) {
-        font-size: 36px;
-      }
-      @media screen and (min-width: 2560px) {
-        font-size: 4rem;
-      }
-    }
-  }
-}
-
-/***************************/
-
 #hero {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5rem;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../assets/img/bluesky_bg.webp");
   background-size: cover;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
+  padding-top: $h-height-init;
   text-align: center;
-  flex-direction: column;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
-  a {
-    text-decoration: none;
-    color: #fff;
-    &:visited &:hover {
-      text-decoration: none;
-      color: #fff;
+
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    max-width: 1080px;
+    width: 100%;
+
+    h2 {
+      margin-bottom: 0.5rem;
     }
   }
 }
+
+/***************************/
 
 #content {
   text-align: center;
@@ -251,19 +225,28 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: 5rem;
   width: 100%;
   height: 100vh;
   background-color: #000;
-  color: #fff;
+
+  .sm-title-container,
+  .social-media {
+    max-width: 1080px;
+    width: 100%;
+  }
 
   .sm-title-container {
-    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
     -webkit-animation-name: fade;
     animation-name: fade;
+
     h3 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
     }
+
     span {
       font-size: 1.125rem;
     }
@@ -276,8 +259,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    //height: 50%;
+
     ul {
       list-style: none;
       display: flex;
@@ -285,10 +267,10 @@ footer {
       justify-content: space-evenly;
       align-items: center;
       width: 100%;
-      //height: 100%;
       @media screen and (max-width: 768px) {
         padding: 0;
       }
+
       a {
         color: #fff;
         &.socials {
@@ -323,6 +305,7 @@ footer {
   }
 }
 
+/*
 #twitch {
   a {
     &.socials {
@@ -332,6 +315,7 @@ footer {
     }
   }
 }
+*/
 
 #github {
   a {
@@ -353,19 +337,28 @@ footer {
   }
 }*/
 
+/***************************/
+
 #content2 {
   background-color: $dark-bg;
-  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh;
+
   .soon {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    max-width: 1080px;
+    width: 100%;
+    text-align: center;
+
     h2 {
       font-size: 2rem;
     }
+
     span {
       font-size: 1.5rem;
     }
@@ -373,3 +366,51 @@ footer {
 }
 
 /***************************/
+
+.go-up {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  opacity: 0.8;
+  z-index: z("go-up-arrow");
+  transition: 0.7s;
+  &:hover {
+    opacity: 1;
+  }
+  @media screen and (max-width: 768px) {
+    bottom: 32px;
+    height: auto;
+  }
+}
+
+#scrollauto {
+  &.go-up {
+    a {
+      font-size: 42px;
+      color: #fff;
+      @media screen and (max-width: 768px) {
+        font-size: 36px;
+      }
+      @media screen and (min-width: 2560px) {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+/***************************/
+
+footer {
+  display: flex;
+  width: 100%;
+  height: $hf-height;
+  background-color: #000;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  .copyright {
+    font-size: 0.875rem;
+  }
+}

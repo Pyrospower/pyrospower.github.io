@@ -1,33 +1,30 @@
-document.body.onload = bodyAppear;
+const socialMedia = document.getElementById("content").childNodes[3];
+const another = document.getElementById("content2").childNodes[1];
+let smF = (ant = 1);
 
-function bodyAppear() {
-  document.getElementById("hero").classList.remove("isgone");
-  document.getElementById("hero").classList.add("appear");
-}
+const header = document.getElementById("header");
 
-var socialMedia = document.getElementById("content").childNodes[3];
-var another = document.getElementById("content2").childNodes[1];
-var smF = (ant = 1);
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    header.style.height = "56px";
+  } else {
+    header.style.height = "70px";
+  }
+});
+
+let menu = document.getElementById("menu");
 
 function showNav() {
-  document.getElementById("navigation").classList.remove("closeNav");
-  document.getElementById("navigation").classList.add("bringNav");
+  menu.classList.remove("closeNav");
+  menu.classList.add("bringNav");
 }
 
 function closeNav() {
-  document.getElementById("navigation").classList.remove("bringNav");
-  document.getElementById("navigation").classList.add("closeNav");
+  menu.classList.remove("bringNav");
+  menu.classList.add("closeNav");
 }
 
-function makeNavBarFadeOut() {
-  if (window.scrollY == 15) {
-    //do stuff
-  } else {
-    //do other stuff
-  }
-}
-
-let words = [
+const words = [
   "Page under construction",
   "Page en construction",
   "Seite im Aufbau",
@@ -39,7 +36,7 @@ let words = [
 
 var i = 0;
 setInterval(function () {
-  document.getElementById("change").innerHTML = words[i];
+  document.getElementById("change").textContent = words[i];
   if (i >= words.length - 1) {
     i = 0;
   } else {
@@ -58,7 +55,7 @@ function showSecondPart() {
   }
 }
 
-var scrollArrow = document.getElementById("scrollauto");
+const scrollArrow = document.getElementById("scrollauto");
 
 window.addEventListener("scroll", function () {
   var scrollTop = window.scrollY,
@@ -67,7 +64,7 @@ window.addEventListener("scroll", function () {
 
   var scrollPercent = (scrollTop / (scrollHeight - windowHeight)) * 100;
   /*
-  var navFixed = document.getElementById("nav");
+  var navFixed = document.querySelector("header");
   if (scrollPercent > 0.7) {
     navFixed.classList.add(""); // Ajoute une classe dans laquelle la taille de la barre de navigation augmente avec une transition
     // et la position passe en fixed
@@ -94,7 +91,7 @@ window.addEventListener("scroll", function () {
     socialMedia.classList.remove("disappear");
     smF = 2;
   } else {
-    if (smF == 2) {
+    if (smF === 2) {
       smF -= 1;
       socialMedia.classList.remove("appear");
       socialMedia.classList.add("disappear");
@@ -108,7 +105,7 @@ window.addEventListener("scroll", function () {
     another.classList.remove("disappear");
     ant = 2;
   } else {
-    if (ant == 2) {
+    if (ant === 2) {
       ant -= 1;
       another.classList.remove("appear");
       another.classList.add("disappear");
@@ -117,16 +114,16 @@ window.addEventListener("scroll", function () {
 });
 
 // Loader
-var btnanimation = document.getElementsByClassName("btnanimation");
-var rectangleanimation = document.getElementById("rectangleanimation");
-var blackshade = document.getElementById("blackshade");
+const btnanimation = document.getElementsByClassName("btnanimation");
+const rectangleanimation = document.getElementById("rectangleanimation");
+const blackshade = document.getElementById("blackshade");
 
-function closeanim() {
+const closeanim = () => {
   rectangleanimation.classList.remove("show2anim");
   blackshade.classList.remove("show");
-}
+};
 
-function openrectangleanim() {
+const openrectangleanim = () => {
   rectangleanimation.classList.add("show2anim");
   blackshade.classList.add("show");
-}
+};
