@@ -1,9 +1,23 @@
-const socialMedia = document.getElementById("content").childNodes[3];
-const another = document.getElementById("content2").childNodes[1];
-let smF = (ant = 1);
+// DOM elements
 
 const header = document.getElementById("header");
+const menu = document.getElementById("menu");
 
+const btnanimation = document.getElementsByClassName("btnanimation");
+const rectangleanimation = document.getElementById("rectangleanimation");
+const blackshade = document.getElementById("blackshade");
+
+const socialMedia = document.getElementById("socialMedia");
+const another = document.getElementById("another");
+
+const scrollArrow = document.getElementById("scrollauto");
+
+// Variables
+let smF = (ant = 1);
+
+/***************************/
+
+// Header animation
 document.addEventListener("scroll", () => {
   if (window.scrollY > 0) {
     header.style.height = "56px";
@@ -12,18 +26,29 @@ document.addEventListener("scroll", () => {
   }
 });
 
-let menu = document.getElementById("menu");
-
-function showNav() {
+// Menu animation
+const showNav = () => {
   menu.classList.remove("closeNav");
   menu.classList.add("bringNav");
-}
+};
 
-function closeNav() {
+const closeNav = () => {
   menu.classList.remove("bringNav");
   menu.classList.add("closeNav");
-}
+};
 
+// Loader
+const closeanim = () => {
+  rectangleanimation.classList.remove("show2anim");
+  blackshade.classList.remove("show");
+};
+
+const openrectangleanim = () => {
+  rectangleanimation.classList.add("show2anim");
+  blackshade.classList.add("show");
+};
+
+// Soon
 const words = [
   "Page under construction",
   "Page en construction",
@@ -34,8 +59,8 @@ const words = [
   "Página em construção",
 ];
 
-var i = 0;
-setInterval(function () {
+let i = 0;
+setInterval(() => {
   document.getElementById("change").textContent = words[i];
   if (i >= words.length - 1) {
     i = 0;
@@ -44,34 +69,16 @@ setInterval(function () {
   }
 }, 500);
 
-function showSecondPart() {
-  content2 = document.getElementById("content2");
-  if (window.scrollY >= 306) {
-    content2.classList.remove("isgone");
-    content2.classList.add("appear");
-  } else {
-    content2.classList.remove("appear");
-    content2.classList.add("isgone");
-  }
-}
+/***************************/
 
-const scrollArrow = document.getElementById("scrollauto");
-
-window.addEventListener("scroll", function () {
-  var scrollTop = window.scrollY,
+// Scroll stuff
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY,
     windowHeight = window.innerHeight,
     scrollHeight = document.body.scrollHeight;
 
-  var scrollPercent = (scrollTop / (scrollHeight - windowHeight)) * 100;
-  /*
-  var navFixed = document.querySelector("header");
-  if (scrollPercent > 0.7) {
-    navFixed.classList.add(""); // Ajoute une classe dans laquelle la taille de la barre de navigation augmente avec une transition
-    // et la position passe en fixed
-  } else {
-    navFixed.classList.remove("");
-  }
-  */
+  const scrollPercent = (scrollTop / (scrollHeight - windowHeight)) * 100;
+
   if (scrollPercent > 47.9) {
     scrollArrow.style.display = "block";
   } else {
@@ -84,7 +91,7 @@ window.addEventListener("scroll", function () {
     scrollArrow.style.marginBottom = "0px";
   }
 
-  // Social Media
+  // Social media
   if (scrollPercent > 28 && scrollPercent < 80) {
     socialMedia.classList.remove("isgone");
     socialMedia.classList.add("appear");
@@ -112,18 +119,3 @@ window.addEventListener("scroll", function () {
     }
   }
 });
-
-// Loader
-const btnanimation = document.getElementsByClassName("btnanimation");
-const rectangleanimation = document.getElementById("rectangleanimation");
-const blackshade = document.getElementById("blackshade");
-
-const closeanim = () => {
-  rectangleanimation.classList.remove("show2anim");
-  blackshade.classList.remove("show");
-};
-
-const openrectangleanim = () => {
-  rectangleanimation.classList.add("show2anim");
-  blackshade.classList.add("show");
-};
