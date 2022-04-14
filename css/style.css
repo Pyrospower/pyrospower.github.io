@@ -376,12 +376,12 @@ h2 {
 
 .appear {
   opacity: 1;
-  transition: ease-in 0.2s;
+  transition: ease-in 0.4s;
 }
 
 .disappear {
   opacity: 0;
-  transition: ease-in 0.2s;
+  transition: ease-in 0.4s;
 }
 
 /* gotta change window.scrollY to see if it works, if it does then change animations file & remove fadeInUp on socials */
