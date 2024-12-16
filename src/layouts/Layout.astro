@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import Banner from "~/components/Banner.astro";
 ---
 
 <!doctype html>
@@ -19,23 +19,7 @@ import { Image } from "astro:assets";
 	<body>
 		<div class="min-h-screen bg-[#181a1f] text-white flex flex-col items-center">
 			<div class="w-full max-w-2xl">
-				<div class="relative h-64">
-					<div class="absolute bottom-0 left-0 right-0 p-6 flex items-center gap-4">
-						<div class="relative">
-							<Image
-								src="https://avatars.githubusercontent.com/u/11092955?v=4"
-								alt="Profile picture"
-								width={120}
-								height={120}
-								class="rounded-full border-4 border-gray-900"
-							/>
-						</div>
-						<div class="space-y-2">
-							<h1 class="text-3xl font-bold">Pyrospower</h1>
-							<p class="text-sm italic text-gray-400">he/him</p>
-						</div>
-					</div>
-				</div>
+				<Banner />
 				<slot />
 			</div>
 		</div>
