@@ -5,6 +5,7 @@
   "scripts": {
     "check": "astro check",
     "dev": "astro dev",
+    "clean": "rm -rf node_modules dist",
     "format": "prettier '**/*.{cjs,mjs,ts,md,mdx,json,astro}' --ignore-path ./.gitignore --ignore-unknown --write",
     "format:check": "prettier '**/*.{cjs,mjs,ts,md,mdx,json,astro}' --ignore-path ./.gitignore --ignore-unknown --check",
     "build": "astro check && astro build",
