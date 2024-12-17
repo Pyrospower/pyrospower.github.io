@@ -26,10 +26,12 @@ const socials = [
       <a
         href={url}
         target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Visit ${name}`}
         class={`text-gray-400 ${hoverColor} transition-colors`}
       >
-        <Icon name={`simple-icons:${name}`} class="w-6 h-6" />
+        <Icon name={`simple-icons:${name}`} class="h-6 w-6" />
       </a>
     ))
   }
-</div> 
+</div>
