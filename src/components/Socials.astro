@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+
+const socials = [
+  {
+    name: "youtube",
+    url: "https://youtube.com/@Pyrospower",
+    hoverColor: "hover:text-red-500",
+  },
+  {
+    name: "github",
+    url: "https://github.com/Pyrospower",
+    hoverColor: "hover:text-white",
+  },
+  {
+    name: "x",
+    url: "https://x.com/Pyrospower",
+    hoverColor: "hover:text-white",
+  },
+];
+---
+
+<div class="flex items-center justify-center gap-4 pt-4">
+  {
+    socials.map(({ name, url, hoverColor }) => (
+      <a
+        href={url}
+        target="_blank"
+        class={`text-gray-400 ${hoverColor} transition-colors`}
+      >
+        <Icon name={`simple-icons:${name}`} class="w-6 h-6" />
+      </a>
+    ))
+  }
+</div> 
