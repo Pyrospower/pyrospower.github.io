@@ -1,25 +1,26 @@
 ---
 import { Icon } from "astro-icon/components";
-import Layout from "~/layouts/Layout.astro";
+
 import Socials from "~/components/Socials.astro";
+import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout>
-	<main class="py-2">
-		<div class="p-6 rounded-lg space-y-6">
-			<div class="space-y-4">
-				<h2 class="text-2xl font-bold">Hi there! 👋</h2>
-				<p class="text-gray-400">
-					I enjoy watching VTubers, anime, and playing video games. I also
-					love coding and building cool projects in my free time.
-				</p>
-				<p class="text-gray-400">
-					Feel free to check out my projects on GitHub or subscribe to my
-					YouTube channel for VTuber content!
-				</p>
-			</div>
+  <main class="py-2">
+    <div class="space-y-6 rounded-lg p-6">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold">Hi there! 👋</h2>
+        <p class="text-gray-400">
+          I enjoy watching VTubers, anime, and playing video games. I also love
+          coding and building cool projects in my free time.
+        </p>
+        <p class="text-gray-400">
+          Feel free to check out my projects on GitHub or subscribe to my
+          YouTube channel for VTuber content!
+        </p>
+      </div>
 
-			<Socials />
-		</div>
-	</main>
+      <Socials />
+    </div>
+  </main>
 </Layout>
