@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -15,6 +16,30 @@ import Layout from "../layouts/Layout.astro";
 					Feel free to check out my projects on GitHub or subscribe to my
 					YouTube channel for VTuber content!
 				</p>
+			</div>
+
+			<div class="flex items-center justify-center gap-4 pt-4">
+				<a
+					href="https://youtube.com/@Pyrospower"
+					target="_blank"
+					class="text-gray-400 hover:text-red-500 transition-colors"
+				>
+					<Icon name="simple-icons:youtube" class="w-6 h-6" />
+				</a>
+				<a
+					href="https://github.com/Pyrospower"
+					target="_blank"
+					class="text-gray-400 hover:text-white transition-colors"
+				>
+					<Icon name="simple-icons:github" class="w-6 h-6" />
+				</a>
+				<a
+					href="https://x.com/Pyrospower"
+					target="_blank"
+					class="text-gray-400 hover:text-white transition-colors"
+				>
+					<Icon name="simple-icons:x" class="w-6 h-6" />
+				</a>
 			</div>
 		</div>
 	</main>
