@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@iconify-json/simple-icons": "^1.2.58",
-    "@tailwindcss/vite": "^4.1.17",
+    "@tailwindcss/vite": "^4.2.2",
     "astro": "6.1.1",
     "astro-icon": "^1.1.5",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.8",
