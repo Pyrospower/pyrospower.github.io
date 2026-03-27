@@ -5,7 +5,7 @@
     "": {
       "name": "pyrospower",
       "dependencies": {
-        "@iconify-json/simple-icons": "^1.2.58",
+        "@iconify-json/simple-icons": "^1.2.75",
         "@tailwindcss/vite": "^4.2.2",
         "astro": "6.1.1",
         "astro-icon": "^1.1.5",
@@ -134,7 +134,7 @@
 
     "@ianvs/prettier-plugin-sort-imports": ["@ianvs/prettier-plugin-sort-imports@4.7.0", "", { "dependencies": { "@babel/generator": "7.26.3", "@babel/parser": "7.28.5", "@babel/traverse": "7.26.4", "@babel/types": "7.28.5", "semver": "7.7.3" }, "peerDependencies": { "prettier": "3.6.2" } }, "sha512-soa2bPUJAFruLL4z/CnMfSEKGznm5ebz29fIa9PxYtu8HHyLKNE1NXAs6dylfw1jn/ilEIfO2oLLN6uAafb7DA=="],
 
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.58", "", { "dependencies": { "@iconify/types": "2.0.0" } }, "sha512-XtXEoRALqztdNc9ujYBj2tTCPKdIPKJBdLNDebFF46VV1aOAwTbAYMgNsK5GMCpTJupLCmpBWDn+gX5SpECorQ=="],
+    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.75", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-KvcCUbvcBWb0sbqLIxHoY8z5/piXY08wcY9gfMhF+ph3AfzGMaSmZFkUY71HSXAljQngXkgs4bdKdekO0HQWvg=="],
 
     "@iconify/tools": ["@iconify/tools@4.1.1", "", { "dependencies": { "@iconify/types": "2.0.0", "@iconify/utils": "2.2.1", "@types/tar": "6.1.13", "axios": "1.7.9", "cheerio": "1.0.0", "domhandler": "5.0.3", "extract-zip": "2.0.1", "local-pkg": "0.5.1", "pathe": "1.1.2", "svgo": "3.3.2", "tar": "6.2.1" } }, "sha512-Hybu/HGhv6T8nLQhiG9rKx+ekF7NNpPOEQAy7JRSKht3s3dcFSsPccYzk24Znc9MTxrR6Gak3cg6CPP5dyvS2Q=="],
 
